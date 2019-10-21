@@ -1,0 +1,30 @@
+---
+title: '`weeee`: uma *wee little* análise'
+author:
+- André Machado
+- André Silva
+- Ianca Leite
+- Mariana Costa
+- Vítor Ramos
+abstract: Relatório da Competição de Ciência de Dados da UFRN 2019. Os dados são tais e possuem tal natureza. A análise proposta foi de realizar tal coisa, utilizando tais ferramentas. A visualização final é de tais dados resultantes, utilizando tal coisa.
+lang: pt-BR
+classoption:
+- 10pt
+- a4paper
+geometry: margin=2cm
+linestretch: 1
+fontfamily: newpxtext
+colorlinks: true
+header-includes: |
+    \renewcommand*\familydefault{\sfdefault}
+    \pagestyle{empty}
+include-before: |
+    \thispagestyle{empty}
+...
+
+<!--
+# https://pandoc.org/MANUAL.html#variables-for-latex
+# https://www.ctan.org/pkg/newtx
+# https://tex.stackexchange.com/questions/40558/suppress-page-numbers-in-article-documentclass
+# \pagenumbering{gobble}
+-->
