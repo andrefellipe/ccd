@@ -1,4 +1,5 @@
 ---
+# https://pandoc.org/MANUAL.html#variables-for-latex
 title: '`weeee`: uma *wee little* análise'
 author:
 - André Machado
@@ -12,19 +13,12 @@ classoption:
 - 10pt
 - a4paper
 geometry: margin=2cm
-linestretch: 1
 fontfamily: newpxtext
 colorlinks: true
 header-includes: |
     \renewcommand*\familydefault{\sfdefault}
+    \pagenumbering{gobble}
     \pagestyle{empty}
 include-before: |
     \thispagestyle{empty}
 ...
-
-<!--
-# https://pandoc.org/MANUAL.html#variables-for-latex
-# https://www.ctan.org/pkg/newtx
-# https://tex.stackexchange.com/questions/40558/suppress-page-numbers-in-article-documentclass
-# \pagenumbering{gobble}
--->

@@ -4,27 +4,46 @@
 pandoc README.yaml README.md -o README.pdf
 ```
 
-Nota. O arquivo `README.yaml` contém os metadados para formatar o documento.
+**Nota.** O arquivo [`README.yaml`](https://github.com/vitorsr/ccd/blob/master/README.yaml) contém os metadados para formatar o documento.
 
 + Manual `pandocs-markdown`: <https://pandoc.org/MANUAL.html#pandocs-markdown>.
-+ Mastering Markdown: <https://guides.github.com/features/mastering-markdown/>.
++ *Mastering Markdown*: <https://guides.github.com/features/mastering-markdown/>.
 + Exemplo: <http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html>.
 
+
+# `weeee`: uma *wee little* análise
+Título e resumo (*abstract*) estão nos metadados YAML. Estrutura do documento final:
+
+1. Dados
+2. Análise
+3. Ferramentas
+4. Visualização
+
 ## Dados
-Info. sobre os dados + *preprocessing*.
+Info. sobre os dados e o *preprocessing*. Idealmente o *preprocessing* tem que estar casado com a análise subsequente, e.g.
+
+    *raw data* -> `pandas.DataFrame` -> `numpy.ndarray`
+    > *preprocessing* - - - - - - -     > *analysis* - - 
 
 ## Análise
-Info. sobre a análise -- modelo matemático (e.g., de distrib.), decisão de tamanho de histograma, estabilização de variância, redução de dimensionalidade, análise de variáveis latentes/SVD, etc., transformações, análise de correlação, funções de distância, etc.
+Info. sobre a análise.
 
 **Nota técnica.**
 
-Regressão com penalização $L_1$ possui boa *explainability* das dimensões, ver <https://en.wikipedia.org/wiki/Lasso_(statistics)>.
+Regressão com penalização $L_1$ possui boa *explainability* das dimensões -- seleção esparsa (parcimoniosa) de coeficientes, ver <https://en.wikipedia.org/wiki/Lasso_(statistics)>. Lasso, Ridge, Elastic Net, etc. = fundamentos de *statistical learning*.
 
-SVD também serve para *explainability* dos "fatores", ver <https://en.wikipedia.org/wiki/Singular_value_decomposition#Low-rank_matrix_approximation>.
+SVD também serve para *explainability* dos "fatores", ver <https://en.wikipedia.org/wiki/Singular_value_decomposition#Low-rank_matrix_approximation>. Resolve problema de análise de fatores de síntese. Também usado em *recommender systems*, ver <https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)>.
 
-PCA robusto é a melhor maneira de preencher valores não-previamente existentes (garantias matemáticas + supõe estrutura linear de baixo posto), ver <https://en.wikipedia.org/wiki/Matrix_completion>.
+PCA robusto (ver, <https://en.wikipedia.org/wiki/Robust_principal_component_analysis>) é a melhor maneira de preencher valores não-previamente existentes (garantias matemáticas + supõe estrutura linear de baixo posto), ver <https://en.wikipedia.org/wiki/Matrix_completion>. Resolve problema de falta de dados. O mesmo algoritmo pode também pode ser usado para separar dados em *sparse* + *low-rank*, ferramenta de restauração de dados corrompidos ("denoise") com garantias teóricas, ver <https://en.wikipedia.org/wiki/Low-rank_approximation>.
 
-A melhor forma de realizar estabilização de variância é através casamento (especificação) de histograma, ver também <https://en.wikipedia.org/wiki/Variance-stabilizing_transformation>.
+Noto que esse algoritmo (RPCA/PCP) é estado da arte e ainda em vias de ser contribuído para o `sklearn`, ver <https://github.com/scikit-learn/scikit-learn/issues/5851>. Pode-se usar <http://tensorly.org/stable/modules/generated/tensorly.decomposition.robust_pca.html>, <https://github.com/dganguli/robust-pca>, <https://github.com/dfm/pcp>, ou <https://github.com/glennq/tga>.
+
+![*Sparse and low-rank approximation*](https://www.mdpi.com/sensors/sensors-16-00848/article_deploy/html/images/sensors-16-00848-g009-1024.png){width=40%}
+
+A melhor forma de realizar estabilização de variância (boa prática) é através casamento (especificação) de histograma, ver também <https://en.wikipedia.org/wiki/Variance-stabilizing_transformation>. Estabilização + análise de correlação cruzada = instrumento de redução de dimensionalidade não-linear. Estabilização deve ser incluida em paradigmas que incluem suposições matemáticas de "*Gaussianity*" nos dados, estabilização pode ser revertida depois de processamento.
+
+Outras análises de decomposição possuem interpretabilidade boa dos resultados e não são usualmente feitos. Ver <https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.non_negative_factorization.html>, 
+<https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.fastica.html>.
 
 ## Ferramentas
 Lista descritiva sobre as ferramentas -- basta links. Pode incluir documentação de função específica. Por exemplo,  
@@ -44,7 +63,7 @@ drive.mount('/gdrive')
 ```
 
 ## Visualização
-Info. sobre visualização -- basta links -- ou para o próprio repo em `./viz`, ou no [Zenodo](https://zenodo.org/) ou no [fig**share**](https://figshare.com/). As figuras correspondem às ilustrações que serão usadas nos slides (slides = 1 título + 3 análise).
+Info. sobre visualização -- basta links -- ou para o próprio repo em `./viz`, ou [Zenodo](https://zenodo.org/) ou [fig**share**](https://figshare.com/). As figuras correspondem às ilustrações que serão usadas nos slides (slides = 1 título + 3 análise).
 
 **Nota técnica.**
 
@@ -57,5 +76,7 @@ Matriz de correlação cruzada é a melhor forma de visualizar acoplamentos esta
 *Pair-wise plot* é a melhor forma de visualizar dados *high-dimensional* até ~30 $D$, ver <https://seaborn.pydata.org/generated/seaborn.pairplot.html>.
 
 Outra maneira de visualizar dados *high-dimensional* é dividir em *facets* (*subsets*), como <https://seaborn.pydata.org/examples/faceted_histogram.html>.
+
+Outra maneira é via *dot plot*, ver <https://seaborn.pydata.org/examples/pairgrid_dotplot.html>.
 
 *Heatmap* é a melhor forma de visualizar dados 3 $D$, com 2 variáveis fixas, ver <https://seaborn.pydata.org/examples/heatmap_annotation.html>.
