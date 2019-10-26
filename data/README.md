@@ -1,3 +1,8 @@
+## Files
+* **baseline_temp.csv**: a diferença absoluta entre cada medida diária de agosto de 2019 e a média, em agosto, para todos os anos anteriores a 2019. _created in [baseline.ipynb](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)_
+* **baseline_temp2.csv**: a diferença entre cada medida diária de agosto de 2019 e a média, em agosto, para todos os anos anteriores a 2019. mantém diferenças negativas nas medidas de temperatura. _created in [baseline.ipynb](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)_
+* **inmetr_201908.csv**: dados de todas as plataformas que apresentam medições em agosto de 2019, extraídos em [met_data.R](https://github.com/vitorsr/ccd/blob/master/met_data.R) . _created in [main.ipynb](https://github.com/vitorsr/ccd/blob/master/main.ipynb)_
+
 ## Dropbox (main)
 
     !wget "https://www.dropbox.com/s/7rriacb7c6vzf3m/ccd_2019.zip" -O ccd_2019.zip
