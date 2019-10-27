@@ -23,13 +23,13 @@ Estrutura do documento final:
 3. Ferramentas
 4. Visualização
 
-### Slides ($TODO)
+### Slides ($TODO) [aqui](https://docs.google.com/presentation/d/12wG8uIg7QklofTIYKPcVazenvoP67ua8atwCVvnD_VU/edit?usp=sharing)
 
 Os slides apresentam as visualizações da análise realizada.
 
-1. Figura 1: $TODO
-2. Figura 2: $TODO
-3. Figure 3: $TODO
+1. Figura 1: Gif do delta e imagem do baseline
+2. Figura 2: PCA e Screenplot
+3. Figure 3: 4 imagens forecast
 
 ### Código fonte ($TODO)
 
