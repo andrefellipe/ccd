@@ -1,18 +1,18 @@
 ---
 # https://pandoc.org/MANUAL.html#variables-for-latex
-title: '`weeee`: uma *wee little* análise'
+title: '[`weeee`](https://github.com/vitorsr/ccd): uma *wee little* análise do dia que "virou noite"'
 author:
-- André Machado
-- André Silva
-- Ianca Leite
-- Mariana Costa
-- Vítor Ramos
-abstract: Relatório da Competição de Ciência de Dados da UFRN 2019. Os dados são tais e possuem tal natureza. A análise proposta foi de realizar tal coisa, utilizando tais ferramentas. A visualização final é de tais dados resultantes, utilizando tal coisa.
+    - André Machado
+    - André Silva
+    - Ianca Leite
+    - Mariana Costa
+    - Vítor Ramos
 lang: pt-BR
 classoption:
-- 10pt
-- a4paper
-geometry: margin=2cm
+    - 10pt
+    - a4paper
+documentclass: scrartcl
+geometry: margin=1.5cm
 fontfamily: newpxtext
 colorlinks: true
 header-includes: |
