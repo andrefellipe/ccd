@@ -1,12 +1,13 @@
 ## Files
-* **baseline_temp.csv**: a diferença absoluta entre cada medida diária de agosto de 2019 e a média, em agosto, para todos os anos anteriores a 2019. _created in [baseline.ipynb](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)_
-* **baseline_temp2.csv**: a diferença entre cada medida diária de agosto de 2019 e a média, em agosto, para todos os anos anteriores a 2019. mantém diferenças negativas nas medidas de temperatura. _created in [baseline.ipynb](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)_
-* **inmetr_201908.csv**: dados de todas as plataformas que apresentam medições em agosto de 2019, extraídos em [met_data.R](https://github.com/vitorsr/ccd/blob/master/met_data.R) . _created in [main.ipynb](https://github.com/vitorsr/ccd/blob/master/main.ipynb)_
+
+* **`baseline_temp.csv`:** a diferença absoluta entre cada medida diária de agosto de 2019 e a média, em agosto, para todos os anos anteriores a 2019. _Created in [`baseline.ipynb`](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)._
+* **`baseline_temp2.csv`:** a diferença entre cada medida diária de agosto de 2019 e a média, em agosto, para todos os anos anteriores a 2019. Mantém diferenças negativas nas medidas de temperatura. _Created in [`baseline.ipynb`](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)._
+* **`inmetr_201908.csv`:** dados de todas as plataformas que apresentam medições em agosto de 2019, extraídos em [`met_data.R`](https://github.com/vitorsr/ccd/blob/master/met_data.R) . _Created in [`main.ipynb`](https://github.com/vitorsr/ccd/blob/master/main.ipynb)._
 
 ## Dropbox (main)
 
-    !wget "https://www.dropbox.com/s/7rriacb7c6vzf3m/ccd_2019.zip" -O ccd_2019.zip
-    !unzip ccd_2019.zip
+    !wget -q "https://www.dropbox.com/s/7rriacb7c6vzf3m/ccd_2019.zip" -O ccd_2019.zip
+    !unzip -qq ccd_2019.zip
 
 ## OneDrive (self-hosted)
 
@@ -16,7 +17,7 @@
 | `inmetr.csv`     | https://onedrive.live.com/download?cid=BCBADB0836C97273&resid=BCBADB0836C97273%21115090&authkey=AHJ7x3UN1MzJW1M |
 | `2019.zip`       | https://onedrive.live.com/download?cid=BCBADB0836C97273&resid=BCBADB0836C97273%21115485&authkey=AJlb41BWz0YiBd8 |
 
-    !wget "https://onedrive.live.com/download?cid=BCBADB0836C97273&resid=BCBADB0836C97273%21115089&authkey=AN3WuZnSKh9jgC8" -O bdmep_meta.csv
-    !wget "https://onedrive.live.com/download?cid=BCBADB0836C97273&resid=BCBADB0836C97273%21115090&authkey=AHJ7x3UN1MzJW1M" -O inmetr.csv
-    !wget "https://onedrive.live.com/download?cid=BCBADB0836C97273&resid=BCBADB0836C97273%21115485&authkey=AJlb41BWz0YiBd8" -O 2019.zip
-    !unzip 2019.zip
+    !wget -q "https://onedrive.live.com/download?cid=BCBADB0836C97273&resid=BCBADB0836C97273%21115089&authkey=AN3WuZnSKh9jgC8" -O bdmep_meta.csv
+    !wget -q "https://onedrive.live.com/download?cid=BCBADB0836C97273&resid=BCBADB0836C97273%21115090&authkey=AHJ7x3UN1MzJW1M" -O inmetr.csv
+    !wget -q "https://onedrive.live.com/download?cid=BCBADB0836C97273&resid=BCBADB0836C97273%21115485&authkey=AJlb41BWz0YiBd8" -O 2019.zip
+    !unzip -qq 2019.zip
