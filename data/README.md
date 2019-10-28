@@ -1,12 +1,12 @@
 ## Files
 
-* **83781.csv**: Dados de 2019 da estação de Mirante de Santana (id = 83781).
-* **`baseline_temp.csv`:** a diferença absoluta entre cada medida diária de agosto de 2019 e a média, em agosto, para todos os anos anteriores a 2019. _Created in [`baseline.ipynb`](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)._
-* **`baseline_temp2.csv`:** a diferença entre cada medida diária de agosto de 2019 e a média, em agosto, para todos os anos anteriores a 2019. Mantém diferenças negativas nas medidas de temperatura. _Created in [`baseline.ipynb`](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)._
+* **`83781.csv**`: Dados de 2019 da estação de Mirante de Santana (id = 83781)._Created in [`forecast.ipynb`](https://github.com/vitorsr/ccd/blob/master/forecast.ipynb)._
+* **`baseline.csv`:** média diária de agosto para todos os anos anteriores a 2019. _Created in [`baseline.ipynb`](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)._
+* **`delta.csv`:** a diferença entre cada medida diária de agosto de 2019 e `baseline_historic_mean.csv`. _Created in [`baseline.ipynb`](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)._
 * **`inmetr_201908.csv`:** dados de todas as plataformas que apresentam medições em agosto de 2019, extraídos em [`met_data.R`](https://github.com/vitorsr/ccd/blob/master/met_data.R) . _Created in [`main.ipynb`](https://github.com/vitorsr/ccd/blob/master/main.ipynb)._
-* **pca_components_08-19.csv**: Componentes do PCA (3 Componentes) aplicado ao Mês de Agosto de todos os Dados Disponíveis (1970-2019).
-* **pca_values_08-19.csv**: Resultado de Aplicação do PCA (3 Componentes) ao Mês de Agosto de todos os Dados Disponíveis (1970-2019).
-* **pc1_2019.csv**: Projeção do dia 19 de Agosto na componente PC1 do PCA calculado.
+* **`pca_components_08-19.csv`**: Componentes do PCA (3 Componentes) aplicado ao Mês de Agosto de todos os Dados Disponíveis (1970-2019). _Created in [`baseline.ipynb`](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)._
+* **`pca_values_08-19.csv`**: Resultado de Aplicação do PCA (3 Componentes) ao Mês de Agosto de todos os Dados Disponíveis (1970-2019). _Created in [`baseline.ipynb`](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)._
+* **`pc1_2019.csv`**: Projeção do dia 19 de Agosto na componente PC1 do PCA calculado. _Created in [`baseline.ipynb`](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)._
 
 ## Dropbox (main)
 
