@@ -1,6 +1,6 @@
 ## Files
 
-* **`83781.csv**`: Dados de 2019 da estação de Mirante de Santana (id = 83781)._Created in [`forecast.ipynb`](https://github.com/vitorsr/ccd/blob/master/forecast.ipynb)._
+* **`83781.csv`:** Dados de 2019 da estação de Mirante de Santana (id = 83781)._Created in [`forecast.ipynb`](https://github.com/vitorsr/ccd/blob/master/forecast.ipynb)._
 * **`baseline.csv`:** média diária de agosto para todos os anos anteriores a 2019. _Created in [`baseline.ipynb`](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)._
 * **`delta.csv`:** a diferença entre cada medida diária de agosto de 2019 e `baseline_historic_mean.csv`. _Created in [`baseline.ipynb`](https://github.com/vitorsr/ccd/blob/master/baseline.ipynb)._
 * **`inmetr_201908.csv`:** dados de todas as plataformas que apresentam medições em agosto de 2019, extraídos em [`met_data.R`](https://github.com/vitorsr/ccd/blob/master/met_data.R) . _Created in [`main.ipynb`](https://github.com/vitorsr/ccd/blob/master/main.ipynb)._
