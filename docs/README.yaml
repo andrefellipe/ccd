@@ -12,7 +12,9 @@ classoption:
     - 10pt
     - a4paper
 documentclass: scrartcl
-geometry: margin=1.5cm
+geometry:
+    - margin=1.4cm
+    - top=0.7cm
 fontfamily: newpxtext
 colorlinks: true
 header-includes: |
