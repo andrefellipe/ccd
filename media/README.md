@@ -18,7 +18,7 @@
 ### *Forecast* `tmax` 2019 — janela de 2 anos
 ![Forecast 2 anos](tmax_2y_fcast.png)
 
-### Parâmetros `fbprophet` (ARIMA 1970—2018)
+### Parâmetros `fbprophet` (GAM 1970—2018)
 ![Parâmetros forecast](tmax_params_fcast.png)
 
 Ver Taylor e Letham [1] para mais informações.
